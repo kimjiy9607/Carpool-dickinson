@@ -1,14 +1,15 @@
 import { LOGIN, LOGIN_SUCCESS, FOUND_BAD_WORD, REGISTER } from "../constants/auth-types";
 import firebase from '../../firebase/firebaseConfig';
 
+firebase.auth().onAuthStateChanged(user => {
+    console.log(user)
+});
+
 export const toggleLogin = (payload) => {
 
     return { type: LOGIN, payload }
 };
 
-/**
- * Ask reducer file. Success and Fail should be defined as type also.
- */
 export const register = (payload) => {
     //TODO implement SIGN UP functionality
 

@@ -33,8 +33,6 @@ const useStyles = makeStyles((theme) => ({
 export default function SignUp() {
    const classes = useStyles();
 
-   
-
   // const registering = useSelector(state => state.registering);
   const dispatch = useDispatch();
 
