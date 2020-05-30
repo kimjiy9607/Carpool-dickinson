@@ -2,7 +2,11 @@ import { LOGIN, LOGIN_SUCCESS, FOUND_BAD_WORD, REGISTER } from "../constants/aut
 import firebase from '../../firebase/firebaseConfig';
 
 firebase.auth().onAuthStateChanged(user => {
-    console.log(user)
+    if(user) {
+        console.log('user logged in: ', user);
+    } else {
+        console.log('user logged out');
+    }
 });
 
 export const toggleLogin = (payload) => {
